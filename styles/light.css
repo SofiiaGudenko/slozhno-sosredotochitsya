@@ -3,6 +3,16 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-light{
+--header-color: #FFC2E6;
+  --accent-color: #FF8DCB;
+  --border-color: rgba(255, 0, 112, 0.4);
+  --main-text-color: #F1B2CE;
+  --main-background-color: #000028;
+  --fonts: 'IBM Plex mono';
+  --offset: 20px;
+  --background-image: url(../images/cover-image-light.png);
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
