@@ -9,7 +9,7 @@
   --border-color: rgba(255, 0, 112, 0.4);
   --main-text-color: #F1B2CE;
   --main-background-color: #000028;
-  --fonts: 'IBM Plex mono';
+  --fonts: 'IBM Plex mono', monospace;
   --offset: 20px;
   --background-image: url(../images/cover-image-dark.png);
 }
