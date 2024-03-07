@@ -6,10 +6,21 @@
 :root {
   --header-color: #DB00FF;
   --accent-color: #FF0070;
+  --answer-color: #ff0070;
+  --border-color-active: #FF0070;
+  --rec-color: #ff0070;
   --border-color: rgba(255, 0, 112, 0.4);
   --main-text-color: #F1B2CE;
+  --title-color: #000028;
   --main-background-color: #000028;
   --fonts: 'IBM Plex mono', monospace;
   --offset: 20px;
   --background-image: url(../images/cover-image-dark.png);
+  --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 }
+
+@media (width <= 375px) {
+  :root {
+    --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);;
+  }
+} 

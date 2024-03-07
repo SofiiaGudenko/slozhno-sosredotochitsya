@@ -3,48 +3,24 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light{
-  --header-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --border-color: rgba(255, 0, 112, 0.4);
-  --main-text-color: #353430;
-  --main-background-color: #000028;
-  --fonts: 'IBM Plex mono', monospace;
-  --shadow-color: #ff0070;
-  --offset: 20px;
-  --background-image: url(../images/cover-image-light.png);
-}
 
 @media (prefers-color-scheme: light) {
   :root {
     --header-color: #FFC2E6;
     --accent-color: #FF8DCB;
-    --border-color: #353430;
+    --answer-color: #353430;
+    --border-color: #32312D66;
+    --border-color-active: #353430;
     --shadow-color: #ff0070;
+    --rec-color: #FFF1F7;
     --main-text-color: #353430;
+    --title-color: #353430;
     --main-background-color: #FFF1F7;
     --fonts: 'IBM Plex mono', monospace;
     --offset: 20px;
     --background-image: url(../images/cover-image-light.png);    
     }
-    .header {
-      color: var(--main-text-color);
-    }
-    .decorated-zone::before .decorated-zone::after {
-      border: var(--main-text-color);
-    }
-    .rec {
-      opacity: 0;
-    }
-    .h2 {
-  
-      color: var(--main-text-color);
-    
-    }
 
-    .h2__footer {
-      color: var(--header-color);
-    }
 }
 
 @media (width >= 1024px) and (prefers-color-scheme: light) {
@@ -57,8 +33,10 @@
 .page.theme_light {
   --header-color: #FFC2E6;
     --accent-color: #FF8DCB;
-    --border-color: #353430;
-    ;
+    --answer-color: #353430;
+    --border-color: #32312D66;
+    --rec-color: #FFF1F7;
+    --border-color-active: #353430;
     --main-text-color: #353430;
     --main-background-color: #FFF1F7;
     --fonts: 'IBM Plex mono', monospace;

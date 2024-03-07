@@ -3,39 +3,30 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme_dark {
-  --header-color: #DB00FF;
-  --accent-color: #FF0070;
-  --border-color: rgba(255, 0, 112, 0.4);
-  --main-text-color: #F1B2CE;
-  --main-background-color: #000028;
-  --fonts: 'IBM Plex mono', monospace;
-  --offset: 20px;
-  --background-image: url(../images/cover-image-dark.png);
-}
 @media (prefers-color-scheme: dark) {
   :root {
     --header-color: #DB00FF;
     --accent-color: #FF0070;
     --border-color: rgba(255, 0, 112, 0.4);
     --main-text-color: #F1B2CE;
+    --answer-color: #ff0070;
+    --rec-color: #ff0070;
+    --title-color: #000028;
     --main-background-color: #000028;
     --fonts: 'IBM Plex mono', monospace;
     --offset: 20px;
     --background-image: url(../images/cover-image-dark.png);
   }
-  .decorated-zone::after {
-    color: var(--accent-color);
-  }
-  .decorated-zone::before {
-    color: var(--accent-color);
-  }
+  
 }
 .page.theme_dark {
   --header-color: #DB00FF;
   --accent-color: #FF0070;
+  --answer-color: #ff0070;
+  --rec-color: #ff0070;
   --border-color: rgba(255, 0, 112, 0.4);
   --main-text-color: #F1B2CE;
+  --title-color: #000028;
   --main-background-color: #000028;
   --fonts: 'IBM Plex mono', monospace;
   --offset: 20px;

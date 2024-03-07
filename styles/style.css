@@ -1,19 +1,18 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  max-width: 1024px;
   margin: 0;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   max-inline-size: 1024px;
   margin-inline: auto;
   background-color: var(--main-background-color);
-  height: 100vh;
 }
 
 .header {
-  background-image: var(--background-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  min-height: 668px;
   height: 100vh;
   margin: 0 auto;
   color: var(--accent-color);
@@ -23,23 +22,21 @@
   justify-content: center;
   align-items: start;
   align-items: baseline;
-  max-height: 768px;
   position: relative;
 }
 
 .rec {
-  grid-column-start: 4;
   position: absolute;
-  justify-self: end;
+  right: 0;
   margin: 20px 48px 0 0;
-  font-family: var(--fonts);
+  font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
   line-height: 25px;
   text-align: center;
-  color: var(--accent-color);
+  color: var(--rec-color);
 }
 
 .rec::after {
@@ -50,17 +47,15 @@
   border-radius: 50%;
   inset-block-start: 30%;
   inset-inline-start: 40px;
-  background: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background: currentColor;
+  box-shadow: 0px 0px 4px 2px currentColor;
 }
 
 .header__theme-menu {
-  display: inline-block;
+  display: flex;
   grid-column-start: 2;
-  grid-column-end: span 2;
   justify-content: center;
-  margin-top: 2px;
-  margin-right: 40px;
+  margin-top: 18px;
 }
 
 .header__theme-menu-list {
@@ -75,7 +70,7 @@
   padding: 3px 13px;
   color: var(--accent-color);
   text-align: center;
-  font-family: IBM Plex Mono, monospace;
+  font-family: var(--fonts, Roboto Mono, monospace);
   font-size: 18px;
   line-height: 18px;
   text-transform: lowercase;
@@ -84,28 +79,28 @@
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid var(--border-color);
+  outline: none;
+  border-bottom: 1px solid var(--border-color-active);
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--border-color);
-  color: var(--accent-color);
   cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--border-color);
-  color: var(--accent-color);
+  border: 1px solid var(--border-color-active);
 }
 
-.h1 {
+.header__title {
   grid-row-start: 2;
   grid-column-start: span 4;
-  font-family: var(--fonts);
+  font-family: var(--fonts, Roboto Mono, monospace);
+  align-self: center;
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: var(--logo-size);
   line-height: 82.5%;
   color: var(--header-color);
   text-shadow: 4px 4px 0px var(--accent-color);
@@ -121,6 +116,7 @@
   border-right: 1px solid;
   right: 19px;
   top: 19px;
+  color: var(--answer-color);
 }
 
 .decorated-zone::after {
@@ -133,23 +129,25 @@
   border-left: 1px solid;
   bottom: 19px;
   left: 19px;
+  color: var(--answer-color);
 }
 
-.header__title {
+.header__content {
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 5;
   justify-self: end;
   max-inline-size: 491px;
-  margin: 10px 20px 0 0;
+  margin: 52px 20px 0 0;
   background-color: var(--accent-color);
-  color: var(--main-background-color);
+  color: var(--title-color);
 }
 
-.header__title-text {
+.header__content-text {
   margin: 0;
-  font-family: var(--fonts);
+  font-family: var(--fonts, Roboto Mono, monospace);
+  color: var(--title-color);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -169,18 +167,14 @@
   margin: 0 20px;
 }
 
-.h2 {
+.content__card-title {
   margin: 0;
-  color: var(--main-background-color);
-  font-family: "IBM Plex Mono";
+  color: var(--answer-color);
+  font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-}
-
-.h2__concentrate {
-  color: var(--accent-color);
 }
 
 .answer__concentrate {
@@ -189,18 +183,17 @@
   margin-left: 8px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 20px;
 }
 
-.h2__answer-concentrate {
+.answer-concentrate {
   background-color: var(--accent-color);
-  color: var(--main-background-color);
 }
 
-.p__concentrate {
+.content__card-text {
   margin-top: 12px;
   color: var(--main-text-color);
-  font-family: "IBM Plex Mono";
+  font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -218,9 +211,6 @@
   margin-bottom: 20px;
 }
 
-.h2__attention {
-  color: var(--accent-color);
-}
 .answer__attention {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -228,20 +218,6 @@
   grid-area: 2 / 1 / 4 / 5;
 }
 
-.h2__answer-attention {
-  background-color: var(--accent-color);
-  color: var(--main-background-color);
-}
-
-.p__attention {
-  margin-top: 13px;
-  color: var(--main-text-color);
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-}
 a {
   text-decoration: none;
   color: currentColor;
@@ -253,6 +229,7 @@ a:hover {
 }
 
 a:focus {
+  outline: none;
   border: 1px solid var(--main-text-color);
 }
 
@@ -263,48 +240,19 @@ a:focus {
   margin: 0 20px;
 }
 
-.h2__answer-concentration-title {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-  color: var(--main-background-color);
-  background-color: var(--accent-color);
-  margin-bottom: 20px;
-}
-.h2__concentration {
-  margin: 0;
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
-  color: var(--accent-color);
-}
 .answer__concentration {
   grid-column-start: 2;
   grid-column-end: span 2;
   margin-left: 8px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 20px;
 }
-.h2__answer-concentration {
+.answer__concentration-title {
   margin-bottom: 10px;
   background-color: var(--accent-color);
   color: var(--main-background-color);
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-}
-
-.p__concentration {
-  margin: 0 0 18px 0;
-  color: var(--main-text-color);
-  font-family: "IBM Plex Mono";
+  font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -315,15 +263,6 @@ a:focus {
   margin: 0 20px;
 }
 
-.h2__images {
-  background-color: var(--accent-color);
-  color: var(--main-background-color);
-  font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px;
-}
 .grid__images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -366,20 +305,20 @@ a:focus {
   display: grid;
   grid-template-rows: repeat(3, auto);
   height: 100vh;
-  max-height: 768px;
+  min-height: 668px;
+
   position: relative;
 }
 
 .h2__footer {
   margin: auto;
   grid-area: 2;
-  font-family: var(--fonts);
+  font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--header-color);
-
   text-shadow: 2px 2px 0px var(--accent-color);
   line-height: 82.5%;
 }
@@ -390,14 +329,14 @@ a:focus {
   }
   .header {
     max-height: 1024px;
-    grid-template-rows: 170px 293px min-content 1fr;
   }
   .header__theme-menu {
     width: 70px;
+    top: 170px;
     grid-column-start: 4;
     position: absolute;
     justify-self: end;
-    grid-row: 2;
+    grid-row: 1;
     margin-right: 20px;
   }
   .header__theme-menu-list {
@@ -406,20 +345,19 @@ a:focus {
     flex-direction: column;
     padding: 0;
   }
-  .h1 {
+  .header__title {
     margin-top: 0;
-    grid-row-start: 3;
+    grid-row-start: 2;
     grid-column-start: span 4;
   }
 
-  .header__title {
+  .header__content {
     max-inline-size: 364px;
     justify-self: end;
-    grid-row-start: 4;
-    grid-row-end: 4;
+    grid-row-start: 3;
     grid-column-start: 2;
     grid-column-end: 5;
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   .section__concentrate {
@@ -432,7 +370,6 @@ a:focus {
   .answer__attention {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2px;
   }
   .section__concentration {
     margin-top: 18px;
@@ -448,24 +385,26 @@ a:focus {
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 540px) {
   .header {
-    grid-template-rows: 50px 1fr min-content 1fr;
     max-height: 668px;
   }
   .header__title {
-    grid-column-start: span 4;
-    margin: 5px 10px 0 10px;
+    grid-row: 3;
+    margin: 0 0 58px 16px;
+    font-size: var(--logo-size);
+    align-items: start;
   }
   .header__theme-menu {
     margin-right: 11px;
-    margin-top: 8px;
+    top: 58px;
   }
-  .h1 {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    align-items: start;
-    margin-bottom: 50px;
+  .header__content {
+    grid-row: 4;
+    grid-column: span 4;
+    margin: 0 10px 66px 10px;
   }
+
   .rec {
     margin-right: 38px;
     margin-top: 10px;
@@ -480,7 +419,7 @@ a:focus {
   }
   .main {
     margin-top: 40px;
-    gap: 38px;
+    gap: 54px;
   }
   .section__concentrate {
     display: flex;
@@ -493,7 +432,7 @@ a:focus {
   }
   .answer__concentrate {
     margin: 0;
-    gap: 7px;
+    gap: 27px;
   }
   .section__attention {
     display: flex;
@@ -503,12 +442,13 @@ a:focus {
   .answer__attention {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 24px;
   }
   .section__concentration {
     display: flex;
     flex-direction: column;
     margin: 0 10px;
+    gap: 23px;
   }
   .question__concentration {
     margin-bottom: 20px;
@@ -527,6 +467,6 @@ a:focus {
   }
   .footer {
     max-height: 668px;
-    margin-top: 44px;
+    margin-top: 30px;
   }
 }
