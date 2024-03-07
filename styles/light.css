@@ -6,44 +6,42 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --header-color: #FFC2E6;
-    --accent-color: #FF8DCB;
+    --header-color: #ffc2e6;
+    --accent-color: #ff8dcb;
     --answer-color: #353430;
-    --border-color: #32312D66;
+    --border-color: #32312d66;
     --border-color-active: #353430;
     --shadow-color: #ff0070;
-    --rec-color: #FFF1F7;
+    --rec-color: #fff1f7;
     --main-text-color: #353430;
     --title-color: #353430;
-    --main-background-color: #FFF1F7;
-    --fonts: 'IBM Plex mono', monospace;
+    --main-background-color: #fff1f7;
+    --fonts: "IBM Plex mono", monospace;
     --offset: 20px;
-    --background-image: url(../images/cover-image-light.png);    
-    }
+    --background-image: url(../images/cover-image-light.png);
+  }
 }
 
 @media (width >= 1024px) and (prefers-color-scheme: light) {
   .h1 {
     text-shadow: 4px 4px 0px var(--shadow-color);
-
   }
 }
 /* Остальные стили */
 .page.theme_light {
-  --header-color: #FFC2E6;
-    --accent-color: #FF8DCB;
-    --answer-color: #353430;
-    --border-color: #32312D66;
-    --rec-color: #FFF1F7;
-    --border-color-active: #353430;
-    --main-text-color: #353430;
-    --main-background-color: #FFF1F7;
-    --fonts: 'IBM Plex mono', monospace;
-    --offset: 20px;
-    --background-image: url(../images/cover-image-light.png);  
-  
+  --header-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --answer-color: #353430;
+  --border-color: #32312d66;
+  --rec-color: #fff1f7;
+  --border-color-active: #353430;
+  --main-text-color: #353430;
+  --main-background-color: #fff1f7;
+  --fonts: "IBM Plex mono", monospace;
+  --offset: 20px;
+  --background-image: url(../images/cover-image-light.png);
+
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя */
-  
 }
