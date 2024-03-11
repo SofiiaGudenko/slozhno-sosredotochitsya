@@ -1,9 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 @media (prefers-color-scheme: light) {
   :root {
     --header-color: #ffc2e6;
@@ -23,7 +17,7 @@
 }
 
 @media (width >= 1024px) and (prefers-color-scheme: light) {
-  .h1 {
+  .header__title {
     text-shadow: 4px 4px 0px var(--shadow-color);
   }
 }

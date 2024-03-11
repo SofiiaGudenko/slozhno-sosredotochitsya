@@ -250,7 +250,7 @@ a:focus {
 .answer__concentration-title {
   margin-bottom: 10px;
   background-color: var(--accent-color);
-  color: var(--main-background-color);
+  color: var(--title-color);
   font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 400;
@@ -309,7 +309,7 @@ a:focus {
   position: relative;
 }
 
-.h2__footer {
+.footer__title{
   margin: auto;
   grid-area: 2;
   font-family: var(--fonts, Roboto Mono, monospace);
@@ -323,7 +323,7 @@ a:focus {
 
 @media (width <= 768px) {
   .main {
-    gap: 45px;
+    gap: 66px;
   }
   .header {
     max-height: 1024px;
@@ -376,7 +376,7 @@ a:focus {
     margin-left: 13px;
   }
   .section__images {
-    margin-top: 24px;
+    margin-top: 15px;
   }
   .footer {
     max-height: 1024px;
@@ -389,8 +389,8 @@ a:focus {
   }
   .header__title {
     grid-row: 3;
-    margin: 0 0 58px 16px;
-    font-size: var(--logo-size);
+    margin: 0 0 54px 8px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     align-items: start;
   }
   .header__theme-menu {
@@ -465,6 +465,6 @@ a:focus {
   }
   .footer {
     max-height: 668px;
-    margin-top: 30px;
+    margin-top: 43px;
   }
 }
