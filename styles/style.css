@@ -26,8 +26,8 @@
 
 .rec {
   position: absolute;
-  right: 0;
-  margin: 20px 48px 0 0;
+  right: 48px;
+  top: 20px;
   font-family: var(--fonts, Roboto Mono, monospace);
   font-style: normal;
   font-weight: 400;
@@ -309,7 +309,7 @@ a:focus {
   position: relative;
 }
 
-.footer__title{
+.footer__title {
   margin: auto;
   grid-area: 2;
   font-family: var(--fonts, Roboto Mono, monospace);
@@ -325,24 +325,24 @@ a:focus {
   .main {
     gap: 66px;
   }
-  .header {
-    max-height: 1024px;
-  }
+
   .header__theme-menu {
     width: 70px;
-    top: 170px;
     grid-column-start: 4;
-    position: absolute;
     justify-self: end;
+    align-self: end;
+    margin-bottom: 55px;
     grid-row: 1;
     margin-right: 20px;
   }
+
   .header__theme-menu-list {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0;
   }
+
   .header__title {
     margin-top: 0;
     grid-row-start: 2;
@@ -378,25 +378,22 @@ a:focus {
   .section__images {
     margin-top: 15px;
   }
-  .footer {
-    max-height: 1024px;
-  }
 }
 
 @media (width <= 540px) {
-  .header {
-    max-height: 668px;
-  }
   .header__title {
     grid-row: 3;
-    margin: 0 0 54px 8px;
+    margin: 0 0 56px 10px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     align-items: start;
   }
+
   .header__theme-menu {
+    grid-row: 2;
     margin-right: 11px;
-    top: 58px;
+    margin-bottom: 71px;
   }
+
   .header__content {
     grid-row: 4;
     grid-column: span 4;
@@ -404,21 +401,25 @@ a:focus {
   }
 
   .rec {
-    margin-right: 38px;
-    margin-top: 10px;
+    right: 38px;
+    top: 10px;
   }
+
   .decorated-zone::before {
     right: 10px;
     top: 10px;
   }
+
   .decorated-zone::after {
     left: 10px;
     bottom: 10px;
   }
+
   .main {
     margin-top: 40px;
     gap: 54px;
   }
+
   .section__concentrate {
     display: flex;
     flex-direction: column;
@@ -464,7 +465,10 @@ a:focus {
     margin-top: 10px;
   }
   .footer {
-    max-height: 668px;
     margin-top: 43px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
