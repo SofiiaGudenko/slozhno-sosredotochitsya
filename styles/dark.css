@@ -6,6 +6,7 @@
     --border-color-active: #ff0070;
     --main-text-color: #F1B2CE;
     --answer-color: #ff0070;
+    --shadow-color: #ff0070;
     --rec-color: #ff0070;
     --title-color: #000028;
     --main-background-color: #000028;
@@ -20,6 +21,7 @@
   --header-color: #DB00FF;
   --accent-color: #FF0070;
   --answer-color: #ff0070;
+  --shadow-color: #ff0070;
   --rec-color: #ff0070;
   --border-color: rgba(255, 0, 112, 0.4);
   --border-color-active: #ff0070;
