@@ -16,9 +16,13 @@
   }
 }
 
-@media (width >= 1024px) and (prefers-color-scheme: light) {
+@media (width >= 1024px) {
   .header__title {
     text-shadow: 4px 4px 0px var(--shadow-color);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0px var(--shadow-color);
   }
 }
 /* Остальные стили */
@@ -27,9 +31,11 @@
   --accent-color: #ff8dcb;
   --answer-color: #353430;
   --border-color: #32312d66;
+  --shadow-color: #ff0070;
   --rec-color: #fff1f7;
   --border-color-active: #353430;
   --main-text-color: #353430;
+  --title-color: #353430;
   --main-background-color: #fff1f7;
   --fonts: "IBM Plex mono", monospace;
   --offset: 20px;
