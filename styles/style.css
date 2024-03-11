@@ -309,7 +309,7 @@ a:focus {
   position: relative;
 }
 
-.footer__title{
+.footer__title {
   margin: auto;
   grid-area: 2;
   font-family: var(--fonts, Roboto Mono, monospace);
