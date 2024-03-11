@@ -67,7 +67,7 @@
 
 .header__theme-menu-button {
   padding: 3px 13px;
-  color: var(--accent-color);
+  color: var(--answer-color);
   text-align: center;
   font-family: var(--fonts, Roboto Mono, monospace);
   font-size: 18px;
